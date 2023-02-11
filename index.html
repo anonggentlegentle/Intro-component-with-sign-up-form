@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="script.js"></script>
 
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
@@ -43,34 +44,94 @@
 
         <fieldset class="main__fieldset">
           <form action="" class="main__form">
-            <input
-              type="text"
-              class="main__input main__input--1"
-              id="main__input--1"
-              required
-              placeholder="First Name"
-            />
-            <input
-              type="text"
-              class="main__input main__input--2"
-              id="main__input--2"
-              required
-              placeholder="Last Name"
-            />
-            <input
-              type="email"
-              class="main__input main__input--3"
-              id="main__input--3"
-              required
-              placeholder="Email Address"
-            />
-            <input
-              type="password"
-              class="main__input main__input--4"
-              id="main__input--4"
-              required
-              placeholder="Password"
-            />
+            <div class="main__form-box">
+              <div class="main__input-box">
+                <input
+                  type="text"
+                  class="main__input main__input--1"
+                  id="main__input--1"
+                  required
+                  placeholder="First Name"
+                />
+                <div class="main__invalid-icon">
+                  <img
+                    src="images/icon-error.svg"
+                    alt="Error Icon"
+                    class="main__invali-img"
+                  />
+                </div>
+              </div>
+              <p class="main__invalid main__invalid--1">
+                First Name cannot be empty
+              </p>
+            </div>
+
+            <div class="main__form-box">
+              <div class="main__input-box">
+                <input
+                  type="text"
+                  class="main__input main__input--2"
+                  id="main__input--2"
+                  required
+                  placeholder="Last Name"
+                />
+                <div class="main__invalid-icon">
+                  <img
+                    src="images/icon-error.svg"
+                    alt="Error Icon"
+                    class="main__invali-img"
+                  />
+                </div>
+              </div>
+              <p class="main__invalid main__invalid--2">
+                Last Name cannot be empty
+              </p>
+            </div>
+
+            <div class="main__form-box">
+              <div class="main__input-box">
+                <input
+                  type="email"
+                  class="main__input main__input--3"
+                  id="main__input--3"
+                  required
+                  placeholder="Email Address"
+                />
+                <div class="main__invalid-icon">
+                  <img
+                    src="images/icon-error.svg"
+                    alt="Error Icon"
+                    class="main__invali-img"
+                  />
+                </div>
+              </div>
+              <p class="main__invalid main__invalid--3">
+                Looks like this is not an email
+              </p>
+            </div>
+
+            <div class="main__form-box">
+              <div class="main__input-box">
+                <input
+                  type="password"
+                  class="main__input main__input--4"
+                  id="main__input--4"
+                  required
+                  placeholder="Password"
+                />
+                <div class="main__invalid-icon">
+                  <img
+                    src="images/icon-error.svg"
+                    alt="Error Icon"
+                    class="main__invali-img"
+                  />
+                </div>
+              </div>
+              <p class="main__invalid main__invalid--4">
+                Password cannot be empty
+              </p>
+            </div>
+
             <button class="btn btn--submit" type="submit">
               Claim your free trial
             </button>
