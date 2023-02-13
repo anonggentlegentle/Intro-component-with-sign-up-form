@@ -6,86 +6,54 @@ const lastNameInput = document.querySelector(".main__input--2");
 const emailInput = document.querySelector(".main__input--3");
 const passwordInput = document.querySelector(".main__input--4");
 
+const addStyles = function (num) {
+  document
+    .querySelector(`.main__input--${num} + .main__invalid-icon`)
+    .classList.add("unhide");
+
+  document.querySelector(`.main__invalid--${num}`).classList.add("unhide");
+
+  document
+    .querySelector(`.main__input--${num}`)
+    .classList.add("invalid-border");
+};
+
+const removeStyles = function (num) {
+  document
+    .querySelector(`.main__input--${num} + .main__invalid-icon`)
+    .classList.remove("unhide");
+
+  document.querySelector(`.main__invalid--${num}`).classList.remove("unhide");
+
+  document
+    .querySelector(`.main__input--${num}`)
+    .classList.remove("invalid-border");
+};
+
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
   if (!firstNameInput.validity.valid) {
-    document
-      .querySelector(".main__input--1 + .main__invalid-icon")
-      .classList.add("unhide");
-
-    document.querySelector(".main__invalid--1").classList.add("unhide");
-
-    document.querySelector(".main__input--1").classList.add("invalid-border");
+    addStyles(1);
   } else {
-    document
-      .querySelector(".main__input--1 + .main__invalid-icon")
-      .classList.remove("unhide");
-
-    document.querySelector(".main__invalid--1").classList.remove("unhide");
-
-    document
-      .querySelector(".main__input--1")
-      .classList.remove("invalid-border");
+    removeStyles(1);
   }
 
   if (!lastNameInput.validity.valid) {
-    document
-      .querySelector(".main__input--2 + .main__invalid-icon")
-      .classList.add("unhide");
-
-    document.querySelector(".main__invalid--2").classList.add("unhide");
-
-    document.querySelector(".main__input--2").classList.add("invalid-border");
+    addStyles(2);
   } else {
-    document
-      .querySelector(".main__input--2 + .main__invalid-icon")
-      .classList.remove("unhide");
-
-    document.querySelector(".main__invalid--2").classList.remove("unhide");
-
-    document
-      .querySelector(".main__input--2")
-      .classList.remove("invalid-border");
+    removeStyles(2);
   }
 
   if (!emailInput.validity.valid) {
-    document
-      .querySelector(".main__input--3 + .main__invalid-icon")
-      .classList.add("unhide");
-
-    document.querySelector(".main__invalid--3").classList.add("unhide");
-
-    document.querySelector(".main__input--3").classList.add("invalid-border");
+    addStyles(3);
   } else {
-    document
-      .querySelector(".main__input--3 + .main__invalid-icon")
-      .classList.remove("unhide");
-
-    document.querySelector(".main__invalid--3").classList.remove("unhide");
-
-    document
-      .querySelector(".main__input--3")
-      .classList.remove("invalid-border");
+    removeStyles(3);
   }
 
   if (!passwordInput.validity.valid) {
-    document
-      .querySelector(".main__input--4 + .main__invalid-icon")
-      .classList.add("unhide");
-
-    document.querySelector(".main__invalid--4").classList.add("unhide");
-
-    document.querySelector(".main__input--4").classList.add("invalid-border");
+    addStyles(4);
   } else {
-    document
-      .querySelector(".main__input--4 + .main__invalid-icon")
-      .classList.remove("unhide");
-
-    document.querySelector(".main__invalid--4").classList.remove("unhide");
-
-    document
-      .querySelector(".main__input--4")
-      .classList.remove("invalid-border");
+    removeStyles(4);
   }
 });
